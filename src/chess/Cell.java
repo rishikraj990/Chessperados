@@ -32,7 +32,7 @@ public class Cell extends JPanel implements Cloneable{
 	  setBackground(new Color(255, 228, 196));
 	
 	 else
-	  setBackground(new Color(126, 72, 28));
+	  setBackground(new Color(147, 112, 219));
 	 
 	 if(p!=null)
 		 setPiece(p);
@@ -47,7 +47,7 @@ public class Cell extends JPanel implements Cloneable{
 		if((x+y)%2==0)
 			setBackground(new Color(255, 228, 196));
 		else
-			setBackground(new Color(126, 72, 28));
+			setBackground(new Color(147, 112, 219));
 		if(cell.getpiece()!=null)
 		{
 			setPiece(cell.getpiece().getcopy());
@@ -95,7 +95,7 @@ public class Cell extends JPanel implements Cloneable{
 		return this.isSelected;
 	}
 	
-	public void deselect()      //Function to delselect the cell
+	public void deselect()      //Function to deselect the cell
 	{
 		this.setBorder(null);
 		this.isSelected=false;
@@ -130,7 +130,7 @@ public class Cell extends JPanel implements Cloneable{
 		if((x+y)%2==0)
 			setBackground(new Color(255, 228, 196));
 		else
-			setBackground(new Color(126, 72, 28));
+			setBackground(new Color(147, 112, 219));
 		this.ischeck=false;
 	}
 	

@@ -27,7 +27,7 @@ public class Main extends JFrame implements MouseListener
 	
 	//Variable Declaration
 	private static final int Height=700;
-	private static final int Width=900;
+	private static final int Width=1000;
 	private static Rook wr01,wr02,br01,br02;
 	private static Knight wk01,wk02,bk01,bk02;
 	private static Bishop wb01,wb02,bb01,bb02;
