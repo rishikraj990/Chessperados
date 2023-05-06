@@ -8,7 +8,6 @@ import pieces.*;
 /**
  * This is the Cell Class. It is the token class of our GUI.
  * There are total of 64 cells that together makes up the Chess Board
- *
  */
 public class Cell extends JPanel implements Cloneable{
 	
@@ -30,10 +29,10 @@ public class Cell extends JPanel implements Cloneable{
 		setLayout(new BorderLayout());
 	
 	 if((x+y)%2==0)
-	  setBackground(new Color(113,198,113));
+	  setBackground(new Color(255, 228, 196));
 	
 	 else
-	  setBackground(Color.white);
+	  setBackground(new Color(126, 72, 28));
 	 
 	 if(p!=null)
 		 setPiece(p);
@@ -46,9 +45,9 @@ public class Cell extends JPanel implements Cloneable{
 		this.y=cell.y;
 		setLayout(new BorderLayout());
 		if((x+y)%2==0)
-			setBackground(new Color(113,198,113));
+			setBackground(new Color(255, 228, 196));
 		else
-			setBackground(Color.white);
+			setBackground(new Color(126, 72, 28));
 		if(cell.getpiece()!=null)
 		{
 			setPiece(cell.getpiece().getcopy());
@@ -129,9 +128,9 @@ public class Cell extends JPanel implements Cloneable{
 	{
 		this.setBorder(null);
 		if((x+y)%2==0)
-			setBackground(new Color(113,198,113));
+			setBackground(new Color(255, 228, 196));
 		else
-			setBackground(Color.white);
+			setBackground(new Color(126, 72, 28));
 		this.ischeck=false;
 	}
 	

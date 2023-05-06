@@ -27,7 +27,7 @@ public class Main extends JFrame implements MouseListener
 	
 	//Variable Declaration
 	private static final int Height=700;
-	private static final int Width=1110;
+	private static final int Width=900;
 	private static Rook wr01,wr02,br01,br02;
 	private static Knight wk01,wk02,bk01,bk02;
 	private static Bishop wb01,wb02,bb01,bb02;
@@ -120,9 +120,9 @@ public class Main extends JFrame implements MouseListener
 		
 		//Time Slider Details
 		timeSlider.setMinimum(1);
-		timeSlider.setMaximum(15);
+		timeSlider.setMaximum(5);
 		timeSlider.setValue(1);
-		timeSlider.setMajorTickSpacing(2);
+		timeSlider.setMajorTickSpacing(1);
 		timeSlider.setPaintLabels(true);
 		timeSlider.setPaintTicks(true);
 		timeSlider.addChangeListener(new TimeChange());
@@ -146,20 +146,20 @@ public class Main extends JFrame implements MouseListener
 		pieces.Piece P;
 		content=getContentPane();
 		setSize(Width,Height);
-		setTitle("Chess");
+		setTitle("Chessperados By Rishik Raj and Team");
 		content.setBackground(Color.black);
 		controlPanel=new JPanel();
 		content.setLayout(new BorderLayout());
 		controlPanel.setLayout(new GridLayout(3,3));
-		controlPanel.setBorder(BorderFactory.createTitledBorder(null, "Statistics", TitledBorder.TOP,TitledBorder.CENTER, new Font("Lucida Calligraphy",Font.PLAIN,20), Color.ORANGE));
+		controlPanel.setBorder(BorderFactory.createTitledBorder(null, "Statistics", TitledBorder.TOP,TitledBorder.CENTER, new Font("Lucida Calligraphy",Font.PLAIN,20), Color.DARK_GRAY));
 		
 		//Defining the Player Box in Control Panel
 		WhitePlayer=new JPanel();
-		WhitePlayer.setBorder(BorderFactory.createTitledBorder(null, "White Player", TitledBorder.TOP,TitledBorder.CENTER, new Font("times new roman",Font.BOLD,18), Color.RED));
+		WhitePlayer.setBorder(BorderFactory.createTitledBorder(null, "White Player", TitledBorder.TOP,TitledBorder.CENTER, new Font("Lucida Calligraphy",Font.BOLD,18), Color.RED));
 		WhitePlayer.setLayout(new BorderLayout());
 		
 		BlackPlayer=new JPanel();
-		BlackPlayer.setBorder(BorderFactory.createTitledBorder(null, "Black Player", TitledBorder.TOP,TitledBorder.CENTER, new Font("times new roman",Font.BOLD,18), Color.BLUE));
+		BlackPlayer.setBorder(BorderFactory.createTitledBorder(null, "Black Player", TitledBorder.TOP,TitledBorder.CENTER, new Font("Lucida Calligraphy",Font.BOLD,18), Color.BLUE));
 	    BlackPlayer.setLayout(new BorderLayout());
 		
 	    JPanel whitestats=new JPanel(new GridLayout(3,3));
@@ -283,7 +283,7 @@ public class Main extends JFrame implements MouseListener
 	    };
 
 		temp.setMinimumSize(new Dimension(800,700));
-		controlPanel.setMinimumSize(new Dimension(285,700));
+		controlPanel.setMinimumSize(new Dimension(400,700));
 		split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,temp, controlPanel);
 		
 	    content.add(split);
@@ -500,7 +500,7 @@ public class Main extends JFrame implements MouseListener
 		Mainboard.setResizable(false);
     }
     
-    //These are the abstract function of the parent class. Only relevant method here is the On-Click Fuction
+    //These are the abstract function of the parent class. Only relevant method here is the On-Click Function
     //which is called when the user clicks on a particular cell
 	@Override
 	public void mouseClicked(MouseEvent arg0){
